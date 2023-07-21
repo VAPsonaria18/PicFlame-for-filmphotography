@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アップロード完了</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>完了</h1>
+    <img src="{{ url_for('static', filename='image/' + filename) }}" alt="Uploaded image">
+    <a href="{{ url_for('home') }}">もう一度やる</a>
+</body>
+</html>
